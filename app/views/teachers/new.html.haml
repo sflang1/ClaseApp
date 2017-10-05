@@ -1,0 +1,9 @@
+%h4 Nuevo profesor
+
+%p Por favor, ingrese los siguientes datos para el nuevo profesor.
+
+= simple_form_for @teacher, url: teachers_path(), method: :post do |f|
+  = f.input :name
+  = f.input :lastname
+  = f.input :code, as: :integer
+  = f.button :submit
